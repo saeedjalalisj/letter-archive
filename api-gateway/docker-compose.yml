@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  api-gateway:
+    build:
+      context: .
+    ports:
+    - ${PORT}:${PORT}
+    environment:
+      SERVER_PORT: ${PORT}
+    volumes:
+    - ./:/app
